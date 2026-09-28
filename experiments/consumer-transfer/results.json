@@ -1,0 +1,806 @@
+{
+  "cases": [
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [
+          "ledger.decimal_places"
+        ],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "directly_reusable",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "directly_reusable",
+      "file": "experiments/consumer-transfer/cases/case-01.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": []
+      },
+      "id": "case-01",
+      "obligations": {
+        "consumer": [
+          "observe:ledger.decimal_places",
+          "assure:world:ledger-target-a"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-a"
+          ],
+          "observations": [
+            "ledger.decimal_places"
+          ]
+        }
+      },
+      "plan": "directly_reusable",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [
+          "retention.days"
+        ],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [
+          "retention.days"
+        ],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "adaptation_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "adaptation_required",
+      "file": "experiments/consumer-transfer/cases/case-02.json",
+      "findings": {
+        "consumerDifferent": [
+          "retention.days"
+        ],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "retention.days"
+        ],
+        "planUnknown": []
+      },
+      "id": "case-02",
+      "obligations": {
+        "consumer": [
+          "adapt:retention.days",
+          "observe:retention.days",
+          "assure:world:ledger-target-b"
+        ],
+        "plan": {
+          "adaptations": [
+            "retention.days"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-b"
+          ],
+          "observations": [
+            "retention.days"
+          ]
+        }
+      },
+      "plan": "adaptation_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "incompatible",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "incompatible",
+      "file": "experiments/consumer-transfer/cases/case-03.json",
+      "findings": {
+        "consumerDifferent": [
+          "ledger.currency"
+        ],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "ledger.currency"
+        ],
+        "planUnknown": []
+      },
+      "id": "case-03",
+      "obligations": {
+        "consumer": [
+          "adapt:ledger.currency",
+          "assure:world:ledger-target-c"
+        ],
+        "plan": {
+          "adaptations": [
+            "ledger.currency"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-c"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "incompatible",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "additional_evidence_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "additional_evidence_required",
+      "file": "experiments/consumer-transfer/cases/case-04.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [
+          "retention.days"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": [
+          "retention.days"
+        ]
+      },
+      "id": "case-04",
+      "obligations": {
+        "consumer": [
+          "observe:retention.days",
+          "assure:world:ledger-target-d"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-d"
+          ],
+          "observations": [
+            "retention.days"
+          ]
+        }
+      },
+      "plan": "additional_evidence_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "additional_evidence_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "additional_evidence_required",
+      "file": "experiments/consumer-transfer/cases/case-05.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [
+          "retention.days"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": [
+          "retention.days"
+        ]
+      },
+      "id": "case-05",
+      "obligations": {
+        "consumer": [
+          "observe:retention.days",
+          "assure:world:ledger-target-e"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-e"
+          ],
+          "observations": [
+            "retention.days"
+          ]
+        }
+      },
+      "plan": "additional_evidence_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "incompatible",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "incompatible",
+      "file": "experiments/consumer-transfer/cases/case-06.json",
+      "findings": {
+        "consumerDifferent": [
+          "ledger.decimal_places"
+        ],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "ledger.decimal_places"
+        ],
+        "planUnknown": []
+      },
+      "id": "case-06",
+      "obligations": {
+        "consumer": [
+          "adapt:ledger.decimal_places",
+          "assure:world:ledger-target-f"
+        ],
+        "plan": {
+          "adaptations": [
+            "ledger.decimal_places"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-f"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "incompatible",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [
+          "export.object_storage"
+        ],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "additional_evidence_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "additional_evidence_required",
+      "file": "experiments/consumer-transfer/cases/case-07.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [
+          "export.object_storage"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": [
+          "export.object_storage"
+        ]
+      },
+      "id": "case-07",
+      "obligations": {
+        "consumer": [
+          "observe:export.object_storage",
+          "observe:export.object_storage",
+          "assure:world:ledger-target-g"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-g"
+          ],
+          "observations": [
+            "export.object_storage",
+            "export.object_storage"
+          ]
+        }
+      },
+      "plan": "additional_evidence_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "incompatible",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "incompatible",
+      "file": "experiments/consumer-transfer/cases/case-08.json",
+      "findings": {
+        "consumerDifferent": [
+          "export.object_storage"
+        ],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "export.object_storage"
+        ],
+        "planUnknown": []
+      },
+      "id": "case-08",
+      "obligations": {
+        "consumer": [
+          "adapt:export.object_storage",
+          "assure:world:ledger-target-h"
+        ],
+        "plan": {
+          "adaptations": [
+            "export.object_storage"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-h"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "incompatible",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "opaque",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "insufficient_information",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "insufficient_information",
+      "file": "experiments/consumer-transfer/cases/case-09.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": []
+      },
+      "id": "case-09",
+      "obligations": {
+        "consumer": [
+          "assure:world:ledger-target-i"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-i"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "insufficient_information",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "insufficient_information",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "insufficient_information",
+      "file": "experiments/consumer-transfer/cases/case-10.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": []
+      },
+      "id": "case-10",
+      "obligations": {
+        "consumer": [
+          "assure:world:ledger-target-j"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-j"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "insufficient_information",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [
+          "ledger.decimal_places"
+        ],
+        "targetExtraConstraints": []
+      },
+      "consumer": "adaptation_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "adaptation_required",
+      "file": "experiments/consumer-transfer/cases/case-11.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": []
+      },
+      "id": "case-11",
+      "obligations": {
+        "consumer": [
+          "review:repeated-prior-failure",
+          "assure:world:ledger-target-k"
+        ],
+        "plan": {
+          "adaptations": [
+            "ledger.decimal_places"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-k"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "adaptation_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [
+          "retention.days"
+        ],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "adaptation_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "adaptation_required",
+      "file": "experiments/consumer-transfer/cases/case-12.json",
+      "findings": {
+        "consumerDifferent": [
+          "retention.days"
+        ],
+        "consumerUnknown": [
+          "export.window_hours"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "retention.days"
+        ],
+        "planUnknown": [
+          "export.window_hours"
+        ]
+      },
+      "id": "case-12",
+      "obligations": {
+        "consumer": [
+          "adapt:retention.days",
+          "observe:export.window_hours",
+          "assure:world:ledger-target-l"
+        ],
+        "plan": {
+          "adaptations": [
+            "retention.days"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-l"
+          ],
+          "observations": [
+            "export.window_hours"
+          ]
+        }
+      },
+      "plan": "adaptation_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "additional_evidence_required",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "additional_evidence_required",
+      "file": "experiments/consumer-transfer/cases/case-13.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [
+          "export.window_hours"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": [
+          "export.window_hours"
+        ]
+      },
+      "id": "case-13",
+      "obligations": {
+        "consumer": [
+          "observe:export.window_hours",
+          "assure:world:ledger-target-m"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-m"
+          ],
+          "observations": [
+            "export.window_hours"
+          ]
+        }
+      },
+      "plan": "additional_evidence_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "directly_reusable",
+      "consumerMatchesExpected": true,
+      "contested": false,
+      "contestedReason": null,
+      "expected": "directly_reusable",
+      "file": "experiments/consumer-transfer/cases/case-14.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": []
+      },
+      "id": "case-14",
+      "obligations": {
+        "consumer": [
+          "assure:world:ledger-target-n"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-n"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "directly_reusable",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "additional_evidence_required",
+      "consumerMatchesExpected": true,
+      "contested": true,
+      "contestedReason": null,
+      "expected": "additional_evidence_required",
+      "file": "experiments/consumer-transfer/cases/case-15.json",
+      "findings": {
+        "consumerDifferent": [],
+        "consumerUnknown": [
+          "ledger.tax_rules_version"
+        ],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [],
+        "planUnknown": [
+          "ledger.tax_rules_version"
+        ]
+      },
+      "id": "case-15",
+      "obligations": {
+        "consumer": [
+          "observe:ledger.tax_rules_version",
+          "assure:world:ledger-target-o"
+        ],
+        "plan": {
+          "adaptations": [],
+          "assurancesBoundTo": [
+            "world:ledger-target-o"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "additional_evidence_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    },
+    {
+      "bothMissExpected": false,
+      "capsuleSignals": {
+        "adaptableKeys": [],
+        "coverage": "closed_declared",
+        "declaredAdaptationKeys": [
+          "ledger.currency"
+        ],
+        "dependencies": [],
+        "knownFailureKeys": [],
+        "targetExtraConstraints": []
+      },
+      "consumer": "adaptation_required",
+      "consumerMatchesExpected": true,
+      "contested": true,
+      "contestedReason": null,
+      "expected": "adaptation_required",
+      "file": "experiments/consumer-transfer/cases/case-16.json",
+      "findings": {
+        "consumerDifferent": [
+          "ledger.currency"
+        ],
+        "consumerUnknown": [],
+        "findingsOnlyThePlannerReported": [],
+        "inputCarriesThoseKeys": [],
+        "planDifferent": [
+          "ledger.currency"
+        ],
+        "planUnknown": []
+      },
+      "id": "case-16",
+      "obligations": {
+        "consumer": [
+          "adapt:ledger.currency",
+          "assure:world:ledger-target-p"
+        ],
+        "plan": {
+          "adaptations": [
+            "ledger.currency"
+          ],
+          "assurancesBoundTo": [
+            "world:ledger-target-p"
+          ],
+          "observations": []
+        }
+      },
+      "plan": "adaptation_required",
+      "planMatchesExpected": true,
+      "plannerMissesExpectedConsumerAgrees": false,
+      "reversal": false
+    }
+  ],
+  "measurements": {
+    "consumer": "the consumer-transfer crate, outside tests/, reading the representation, the schema, the contract and protocol sections 1 to 5",
+    "expected": "experiments/consumer-transfer/expectations.json, declared in the protocol before the consumer was written",
+    "plan": "tests/support/transfer_core.rs, the procedure ADR-005 moved out of src/",
+    "sharedInput": "one case file per case; the consumer receives the re-serialised published capsule, the re-serialised published target and the declared adaptations, and nothing else"
+  },
+  "protocol": "docs/CONSUMER-CHECK-PROTOCOL.md",
+  "reversalCondition": "consumer(capsule) != expected AND plan_transfer(case) == expected",
+  "schema": "world-consumer-check/v1",
+  "summary": {
+    "cases": 16,
+    "casesWhereBothMiss": [],
+    "casesWhereTheConsumerMisses": [],
+    "casesWhereThePlannerMisses": [],
+    "consumerMatchesExpected": 16,
+    "contestedReversalCases": [],
+    "outcome": "A",
+    "outcomeReading": "the representation carried every pre-registered decision on its own, outside the test harness, and nothing is reintroduced",
+    "planMatchesExpected": 16,
+    "reversalCases": [],
+    "reversalCasesOutsideContested": [],
+    "reversalObserved": false
+  }
+}

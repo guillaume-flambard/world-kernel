@@ -1,0 +1,14 @@
+[workspace]
+
+[package]
+name = "consumer-transfer"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "An external consumer of the published experience capsule, outside the Kernel's tests"
+publish = false
+
+[dependencies]
+world-kernel = { path = "../.." }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

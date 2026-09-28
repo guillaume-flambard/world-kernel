@@ -19,6 +19,9 @@ pub mod baseline_a;
 pub mod baseline_b;
 #[path = "branch_fixture.rs"]
 pub mod branch_fixture;
+/// The check-1 comparison and the control that proves it can fail.
+#[path = "consumer_check.rs"]
+pub mod consumer_check;
 #[path = "harness.rs"]
 pub mod harness;
 #[path = "impact_fixture.rs"]

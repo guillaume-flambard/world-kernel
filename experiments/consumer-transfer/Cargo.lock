@@ -418,7 +418,6 @@ dependencies = [
 name = "world-kernel"
 version = "0.1.0"
 dependencies = [
- "consumer-transfer",
  "rusqlite",
  "serde",
  "serde_json",

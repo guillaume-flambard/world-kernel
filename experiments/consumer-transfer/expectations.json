@@ -1,0 +1,122 @@
+{
+  "schema": "world-consumer-check-expectations/v1",
+  "declared": "2026-09-28, in docs/CONSUMER-CHECK-PROTOCOL.md section 6, before the consumer was written",
+  "derivation": "read off the contract's rules and the readings in section 5, not off either implementation",
+  "vocabulary": "the snake_case spelling of the variant name in docs/TRANSFER-CONTRACT.md",
+  "cases": [
+    {
+      "id": "case-01",
+      "expected_status": "directly_reusable",
+      "read_from": "5.1, 5.2 rule 6",
+      "why": "three facts and one capability resolve to a match, the coverage is closed, and nothing else is found",
+      "contested": false
+    },
+    {
+      "id": "case-02",
+      "expected_status": "adaptation_required",
+      "read_from": "5.2 rule 4, 5.3",
+      "why": "the differing key is one the author declared adaptable, so the difference is bridgeable and is not a violation",
+      "contested": false
+    },
+    {
+      "id": "case-03",
+      "expected_status": "incompatible",
+      "read_from": "5.2 rule 3",
+      "why": "a required fact differs and neither the author nor the target domain declares a way to bridge it",
+      "contested": false
+    },
+    {
+      "id": "case-04",
+      "expected_status": "additional_evidence_required",
+      "read_from": "5.1",
+      "why": "the target never declares the key a condition needs, which is an obligation to observe and not a violation",
+      "contested": false
+    },
+    {
+      "id": "case-05",
+      "expected_status": "additional_evidence_required",
+      "read_from": "5.1",
+      "why": "the target declares the key unknown, which is a second finding from an undeclared key and reaches the same status",
+      "contested": false
+    },
+    {
+      "id": "case-06",
+      "expected_status": "incompatible",
+      "read_from": "5.1, 5.2 rule 3",
+      "why": "the target established that the key is not there, and a required value is not satisfied by an established absence",
+      "contested": false
+    },
+    {
+      "id": "case-07",
+      "expected_status": "additional_evidence_required",
+      "read_from": "5.1",
+      "why": "nobody checked the capability in the target, and not observed is not unavailable",
+      "contested": false
+    },
+    {
+      "id": "case-08",
+      "expected_status": "incompatible",
+      "read_from": "5.1, 5.2 rule 3",
+      "why": "the capability is known not to exist in the target, which is a known violation and not a request for evidence",
+      "contested": false
+    },
+    {
+      "id": "case-09",
+      "expected_status": "insufficient_information",
+      "read_from": "5.2 rule 1",
+      "why": "the capsule declines to say how complete its own conditions are, so it cannot license a direct reuse",
+      "contested": false
+    },
+    {
+      "id": "case-10",
+      "expected_status": "insufficient_information",
+      "read_from": "5.2 rule 1",
+      "why": "the capsule declares no applicability condition, which is a statement about the source and not about the target",
+      "contested": false
+    },
+    {
+      "id": "case-11",
+      "expected_status": "adaptation_required",
+      "read_from": "5.2 rule 2",
+      "why": "every condition holds and a recorded failure was observed under exactly this condition again, so work is owed before proposing the intervention",
+      "contested": false
+    },
+    {
+      "id": "case-12",
+      "expected_status": "adaptation_required",
+      "read_from": "5.2 rule 4 outranks 5",
+      "why": "a bridgeable difference and an undeclared key are both present, and a known difference outranks an unobserved condition",
+      "contested": false
+    },
+    {
+      "id": "case-13",
+      "expected_status": "additional_evidence_required",
+      "read_from": "5.2 rule 5",
+      "why": "one condition holds, the other is undeclared in the target, and no difference and no violation exist",
+      "contested": false
+    },
+    {
+      "id": "case-14",
+      "expected_status": "directly_reusable",
+      "read_from": "5.1",
+      "why": "an absent condition is satisfied by an established absence, and the other condition matches",
+      "contested": false
+    },
+    {
+      "id": "case-15",
+      "expected_status": "additional_evidence_required",
+      "read_from": "5.1, 5.2 rule 5",
+      "why": "a predicate reference names a predicate no published consumer holds, so the condition cannot be established in the target and is owed as an observation",
+      "contested": true,
+      "contested_reason": "docs/TRANSFER-CONTRACT.md does not mention predicate_ref. InsufficientInformation is also defensible, on the reading that a capsule naming something unevaluable has not declared enough to decide."
+    },
+    {
+      "id": "case-16",
+      "expected_status": "adaptation_required",
+      "read_from": "5.3",
+      "why": "a required fact differs and the target domain declares an adaptation covering that key, which makes the difference bridgeable",
+      "contested": true,
+      "contested_reason": "the capsule has no field for a target-domain adaptation and the type that carries one lives in the moved planner, so this case is only reachable through the out-of-band declaration the case file provides."
+    }
+  ]
+}

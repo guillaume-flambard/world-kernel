@@ -1,0 +1,82 @@
+{
+  "id": "case-10",
+  "capsule": {
+    "schema_version": "world-experience-capsule/v0",
+    "id": "exp/nightly-export",
+    "revision": 1,
+    "source_context": {
+      "context_id": "world:ledger-source",
+      "revision": 4,
+      "facts": {
+        "ledger.currency": {
+          "known": "EUR"
+        },
+        "ledger.decimal_places": {
+          "known": 2
+        },
+        "retention.days": {
+          "known": 30
+        },
+        "export.window_hours": {
+          "known": 6
+        }
+      },
+      "capabilities": {
+        "export.object_storage": "available",
+        "scheduler.nightly": "available"
+      },
+      "constraints": {},
+      "coverage": "closed_declared"
+    },
+    "problem": "produce a nightly ledger export a finance team can reconcile",
+    "intervention": "write the ledger export to object storage on a nightly schedule",
+    "applicability_conditions": [],
+    "dependencies": [],
+    "assumptions": [],
+    "outcome": {
+      "verdict": "accepted",
+      "detail": "the nightly export was written and reconciled",
+      "limits": [
+        "established only in the source world"
+      ]
+    },
+    "evidence_refs": [
+      "export:2026-08-31"
+    ],
+    "assurance_refs": [],
+    "known_failures": [],
+    "provenance": {
+      "author": "export-agent",
+      "activity": "nightly-ledger-export",
+      "source_revision": 1,
+      "used_refs": [
+        "world:ledger-source@4"
+      ]
+    }
+  },
+  "target": {
+    "context_id": "world:ledger-target-j",
+    "revision": 1,
+    "facts": {
+      "ledger.currency": {
+        "known": "EUR"
+      },
+      "ledger.decimal_places": {
+        "known": 2
+      },
+      "retention.days": {
+        "known": 30
+      },
+      "export.window_hours": {
+        "known": 6
+      }
+    },
+    "capabilities": {
+      "export.object_storage": "available",
+      "scheduler.nightly": "available"
+    },
+    "constraints": {},
+    "coverage": "partial_declared"
+  },
+  "declared_adaptations": []
+}

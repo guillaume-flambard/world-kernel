@@ -141,15 +141,38 @@ This reduction is wrong if either of these is observed:
 1. **A consumer reads a capsule and reaches a wrong decision without the evaluator.** The whole argument
    for keeping the representation rather than the planner is that the representation is the portable
    part. One consumer outside `tests/` that consumes a capsule and gets transfer wrong, where
-   `plan_transfer` got it right, puts the planner back in `src/`. No such consumer exists in this
-   workspace: slices 7 and 8 of the brief are unreachable from here and are recorded as not attempted,
-   so today this condition is unobserved rather than tested and must not be read as passed.
+   `plan_transfer` got it right, puts the planner back in `src/`. No such consumer existed in this
+   workspace when this ADR was written: slices 7 and 8 of the brief are unreachable from here and are
+   recorded as not attempted.
 2. **A wider corpus separates the two systems.** The brief's 96-case corpus, bounded generative trees
    and the B and C baselines are excluded from tranche 1. If any of them produces a case where A and C
    disagree, the tie was an artefact of 30 hand-designed cases and the comparison must be re-run before
    the reduction stands.
 
 Both checks are an import and a command. Neither needs a milestone, and neither is deferred behind one.
+
+### Condition 1 was executed on 2026-09-28, and did not fire
+
+Pre-registered in [CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md), run by
+`cargo run --example consumer_check`, recorded in
+[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md).
+
+Sixteen cases in a domain the existing fixture does not use, each with an expectation declared from the
+contract before the consumer was written, measured three ways. The consumer, in its own crate outside
+`tests/`, reached the pre-registered decision on all sixteen, and so did `plan_transfer`. Zero reversals,
+including the two cases marked contested in advance because the contract is silent or the published surface
+is incomplete about them. The planner stays out of `src/`.
+
+Two obligation disagreements were recorded rather than dropped, and neither is a reversal. On case 11 the
+capsule carried the key and the consumer did not use it, which is a shortcoming of that consumer. On case
+15 the consumer owes an observation the planner does not, which is a question about the contract's silence
+on `predicate_ref` and not about the representation.
+
+What this did not do is stronger than what it did. The same session read the planner before writing the
+pre-registration and then wrote the consumer, so the pass is necessary and not sufficient. The check that
+would change that is a second consumer written by somebody who has not read `tests/`. The comparison was
+shown to be able to fail: a control consumer that keeps no unknown state and forgets the recorded failures
+is caught on the nine cases whose status turns on a state it cannot represent.
 
 ## What this does not do
 

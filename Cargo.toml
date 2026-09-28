@@ -13,3 +13,9 @@ sha2 = "0.10"
 tempfile = "3"
 thiserror = "2"
 
+# The check-1 consumer lives in its own crate, outside `tests/`, and is depended on only by the
+# experiment that measures it. A dev-dependency cycle is legal in cargo and is what makes the consumer
+# external: it can reach `world_kernel::experience` and nothing else in this repository.
+[dev-dependencies]
+consumer-transfer = { path = "experiments/consumer-transfer" }
+

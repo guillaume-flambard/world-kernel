@@ -1,12 +1,13 @@
 # World Kernel specification
 
 Status: experimental, normative for this repository  
-Last verified: 2026-09-27, M3 finished at 23 of 24 stories covered and 1 partial, the reduction
-[ADR-003](ADR-003-measure-before-building.md) recommended on that result reversed by
-[ADR-004](ADR-004-the-facet-advantage-scales.md), and the reduction the M5 gate ordered applied by
-[ADR-005](ADR-005-reduce-to-the-representation.md)  
+Last verified: 2026-09-28, the first ADR-005 reversal condition executed without firing: a consumer outside
+`tests/` reached the pre-registered transfer decision on 16 of 16 cases, pre-registered in
+[CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md) and recorded in
+[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md)  
 Active milestone: none further pre-registered. M5 tranche 1 closed on its own gate and was then reduced;
-M4 tranche 1 is done and remains limited to the stories in [M4-PROTOCOL.md](M4-PROTOCOL.md).
+M4 tranche 1 is done and remains limited to the stories in [M4-PROTOCOL.md](M4-PROTOCOL.md). No M6, and no
+new capability, is authorised while the second reversal condition is unobserved.
 
 ## 1. Document contract
 

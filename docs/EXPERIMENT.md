@@ -137,18 +137,27 @@ not funded, so M5 closes as a reduction on the same disc as the ones before it, 
 
 ## What would resume it
 
-The one cheap measurement named with the reduction has been run. ADR-004 executed
+The two checks named with the M5 reduction have been run one at a time. The first, an external consumer
+that reads a capsule and decides what transfers, is pre-registered in
+[CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md) and recorded in
+[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md): sixteen cases, three independent
+measurements, the consumer outside `tests/` and the planner both reaching the pre-registered decision on
+every one, zero reversals. That is a pass on a narrow claim, and it stays narrow for the reason the
+protocol declares before the run, which is that one session read the planner and then wrote the consumer.
+The second check, a corpus wide enough to separate the two systems, is not run.
+
+The one cheap measurement named with the earlier reduction has been run. ADR-004 executed
 `cargo run --example incumbent_comparison` against a graph of wide nodes — the advantage
 scaled linearly and unboundedly with fan-out, and the reversal case is recorded in the
 `reversalCase` section of [experiments/incumbent-comparison/results.json](experiments/incumbent-comparison/results.json) — and on that condition the reduction was reversed
 and M4 resumed at tranche 1 only. The cost of being wrong turned out to be one example
 runner.
 
-What would resume it now are the two checks [ADR-005](ADR-005-reduce-to-the-representation.md)
-names with the M5 reduction: a consumer outside `tests/` that consumes a capsule and gets
-transfer wrong where the planner got it right, and a wider corpus that separates the Kernel
-from the competent baseline. Both are an import and a command, neither needs a milestone,
-and neither is deferred behind one. Both are unobserved today rather than passed.
+What remains of the two checks [ADR-005](ADR-005-reduce-to-the-representation.md) named is the
+wider corpus that could separate the Kernel from the competent baseline, and the part of the first
+check that a second, independent consumer would settle. Both are an import and a command, neither
+needs a milestone, and neither is deferred behind one. The consumer check is observed rather than
+passed, because its own threat section was written before the run and is not revised by it.
 
 Nothing else resumes it. A second domain is measured rather than absent; a human path needs
 a consented observation; an external effect dispatcher stays forbidden; and the A-B-A

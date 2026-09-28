@@ -79,6 +79,13 @@ Kollio.
   individually valid branches is blocked by a constraint check on the reconstructed candidate, and a
   composition of exactly the limit is admissible. The oracle in `tests/support/branch_fixture.rs` is a
   separate program over integers that reads no expected value.
+- The first ADR-005 reversal condition was executed on 2026-09-28 and did not fire. The pre-registration is
+  `docs/CONSUMER-CHECK-PROTOCOL.md`, the record is `experiments/consumer-transfer/RESULTS.md`, and the
+  consumer is the separate crate `experiments/consumer-transfer`, which reaches `world_kernel::experience`
+  and nothing else. 16 cases, three independent measurements, the consumer and `plan_transfer` both
+  matching the declared expectation on all 16, zero reversals. `tests/consumer_check.rs` fails the build if
+  the consumer reads anything it was not given, and `the_comparison_detects_a_wrong_consumer` proves the
+  comparison can fail. The second condition, a corpus wide enough to separate the two systems, is unrun.
 - Boundaries that survive: the Kernel stores digests and never object bytes, a reconstruction cannot
   bootstrap its own trust, and no validity flag exists anywhere in the M3 model.
 
@@ -124,9 +131,23 @@ cargo run --example m3_revision
 cargo run --example incumbent_comparison
 cargo run --example m4_branch
 cargo run --example transfer_benchmark
+cargo run --example consumer_check
 jq empty schemas/world-change-v0.experimental.schema.json
 jq empty schemas/experience-capsule-v0.experimental.schema.json
 ```
+
+`experiments/consumer-transfer` is a separate crate, not a target of the root package. Lint and format it
+on its own, or a change to the consumer ships unchecked:
+
+```bash
+cargo clippy --manifest-path experiments/consumer-transfer/Cargo.toml --all-targets -- -D warnings
+cargo fmt --manifest-path experiments/consumer-transfer/Cargo.toml --check
+```
+
+The root package reaches the consumer as a dev-dependency, which is a dev-dependency cycle and is legal in
+cargo. It is what makes the consumer external: the crate can reach `world_kernel::experience` and nothing
+else in this repository. Do not move `consumer-transfer` under `src/`, do not make it a normal dependency,
+and do not give it a path into `tests/`.
 
 Record `UNI_BIN` as an absolute path when running the live UNI contract test. The runner executes the
 binary with the declared workspace as its working directory, so a relative path cannot resolve.
