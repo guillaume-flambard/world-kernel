@@ -1,0 +1,2661 @@
+{
+  "cases": [
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "2 condition(s) [lte, gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-00",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-01",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "2 condition(s) [gte, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-02",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [absent, equals, capability_unavailable], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-03",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "3 condition(s) [equals, gte, member_of], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-04",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [capability_unavailable, capability_available], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-05",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "1 condition(s) [gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-06",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [gte, capability_unavailable, equals, absent], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-07",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [not_equals, lte, capability_available], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-08",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [absent, gte], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-09",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [capability_available, equals, gte, capability_unavailable], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-10",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [present, not_equals, gte, member_of], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-11",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [equals, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-12",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [predicate_ref], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-13",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "3 condition(s) [member_of, absent, absent], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-14",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "directly_reusable",
+      "C_matches_R": true,
+      "R": "directly_reusable",
+      "drawn": "2 condition(s) [not_equals, gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-15",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "insufficient_information",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "1 condition(s) [capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-16",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "2 condition(s) [not_equals, equals], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-17",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [equals, equals, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-18",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [absent, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-19",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "4 condition(s) [absent, gte, absent, absent], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-20",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [capability_available, equals, not_equals, equals], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values text",
+      "id": "wide-21",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [member_of, gte], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values text",
+      "id": "wide-22",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "4 condition(s) [absent, predicate_ref, capability_available, gte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-23",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "1 condition(s) [gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-24",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [member_of, present], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-25",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "4 condition(s) [capability_available, member_of, not_equals, member_of], coverage Opaque, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-26",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "2 condition(s) [member_of, absent], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-27",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-28",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "3 condition(s) [gte, not_equals, lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-29",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [absent], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-30",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [member_of, predicate_ref, absent, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-31",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [capability_available, absent, equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-32",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-33",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [absent, predicate_ref, lte, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-34",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [member_of, member_of, lte, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values text",
+      "id": "wide-35",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [equals, absent, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-36",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [member_of], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-37",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "4 condition(s) [capability_unavailable, predicate_ref, lte, equals], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-38",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [capability_available], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-39",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [lte, present, capability_available], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-40",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [present, absent, capability_unavailable, member_of], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-41",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [present, not_equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-42",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [equals, capability_unavailable, not_equals], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-43",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [capability_unavailable, absent, predicate_ref, member_of], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-44",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [absent, member_of, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-45",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "1 condition(s) [equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-46",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [present], coverage Opaque, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-47",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [lte, present], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-48",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [capability_available], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values text",
+      "id": "wide-49",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [member_of, lte, predicate_ref, capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-50",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-51",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [member_of, equals], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-52",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [capability_available], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-53",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "2 condition(s) [absent, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-54",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [predicate_ref, capability_unavailable, capability_available], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-55",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "1 condition(s) [equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-56",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [capability_available, predicate_ref, capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-57",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [absent, absent, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-58",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [capability_unavailable, capability_unavailable, not_equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-59",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values text",
+      "id": "wide-60",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "1 condition(s) [gte], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-61",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [present, capability_available, equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-62",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [capability_unavailable, not_equals, lte, predicate_ref], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-63",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [member_of, capability_unavailable], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-64",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [capability_unavailable, absent, predicate_ref, not_equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-65",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [gte, lte, equals], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-66",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [gte, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-67",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [predicate_ref], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-68",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [equals, gte, not_equals, member_of], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-69",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [absent, absent, capability_unavailable], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-70",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-71",
+      "separates": false,
+      "shape": "expressible"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [equals, not_equals, capability_unavailable, capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-72",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [absent, equals, equals, predicate_ref], coverage PartialDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-73",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [lte, equals, member_of], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-74",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [absent, member_of, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-75",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [predicate_ref, gte, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-76",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [capability_available, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-77",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "1 condition(s) [absent], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-78",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "3 condition(s) [member_of, lte, predicate_ref], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-79",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "4 condition(s) [absent, absent, capability_unavailable, capability_unavailable], coverage ClosedDeclared, adaptation keys 2, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-80",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "4 condition(s) [not_equals, gte, capability_unavailable, capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-81",
+      "separates": true,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [equals, predicate_ref, member_of, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-82",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "1 condition(s) [capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-83",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": false,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [not_equals, absent, present], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-84",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "insufficient_information",
+      "C_matches_R": true,
+      "R": "insufficient_information",
+      "drawn": "1 condition(s) [capability_available], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-85",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [predicate_ref, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-86",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "adaptation_required",
+      "A_matches_R": true,
+      "C": "adaptation_required",
+      "C_matches_R": true,
+      "R": "adaptation_required",
+      "drawn": "2 condition(s) [capability_available, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-87",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [capability_unavailable, member_of], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-88",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [present, member_of, gte, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-89",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [equals, lte, present, capability_unavailable], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-90",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "2 condition(s) [lte, capability_available], coverage PartialDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-91",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": true,
+      "C": "additional_evidence_required",
+      "C_matches_R": true,
+      "R": "additional_evidence_required",
+      "drawn": "3 condition(s) [not_equals, lte, capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-92",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "2 condition(s) [capability_unavailable, equals], coverage PartialDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-93",
+      "separates": false,
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "A_matches_R": true,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "3 condition(s) [present, present, gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-94",
+      "separates": false,
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "A_matches_R": false,
+      "C": "incompatible",
+      "C_matches_R": true,
+      "R": "incompatible",
+      "drawn": "4 condition(s) [equals, member_of, capability_unavailable, equals], coverage ClosedDeclared, adaptation keys 1, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-95",
+      "separates": true,
+      "shape": "capability_absent_in_a"
+    }
+  ],
+  "corpus": {
+    "bounded": "a flat list of at most four conditions over six keys, no recursion, so a case cannot grow into something undecidable",
+    "cases": 96,
+    "conditionKindCoverage": {
+      "absent": 36,
+      "capability_available": 22,
+      "capability_unavailable": 27,
+      "equals": 29,
+      "gte": 22,
+      "lte": 23,
+      "member_of": 26,
+      "not_equals": 17,
+      "predicate_ref": 25,
+      "present": 17
+    },
+    "coverageClaimCoverage": {
+      "closed_declared": 62,
+      "opaque": 13,
+      "partial_declared": 21
+    },
+    "exclusions": {
+      "actual": 0,
+      "expected": 0,
+      "note": "every shape the generator can produce has a defined expectation, so no case needed to be dropped to be decidable"
+    },
+    "seed": "0x5EED000200000001",
+    "shapeCounts": {
+      "capability_absent_in_a": 74,
+      "expressible": 1,
+      "projection_lossy": 21
+    },
+    "targetFactStateCoverage": {
+      "absent": 88,
+      "known": 334,
+      "undeclared": 82,
+      "unknown": 72
+    }
+  },
+  "disagreements": [
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4"
+        ],
+        "uncoveredKeys": [
+          "k4"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-01",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k4"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [
+          "k4"
+        ],
+        "unknown": []
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k3"
+        ],
+        "uncoveredKeys": [
+          "k3"
+        ],
+        "unknownKeys": [
+          "k1"
+        ]
+      },
+      "drawn": "3 condition(s) [absent, equals, capability_unavailable], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-03",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k1",
+          "k4"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k1",
+          "k4"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4"
+        ],
+        "uncoveredKeys": [
+          "k4"
+        ],
+        "unknownKeys": [
+          "k1"
+        ]
+      },
+      "drawn": "3 condition(s) [equals, gte, member_of], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-04",
+      "oracleFindings": {
+        "different": [
+          "k4"
+        ],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k2"
+        ]
+      },
+      "drawn": "2 condition(s) [equals, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-12",
+      "oracleFindings": {
+        "different": [
+          "k4"
+        ],
+        "unknown": [
+          "k2"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k2"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0",
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k2"
+        ],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "3 condition(s) [member_of, absent, absent], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-14",
+      "oracleFindings": {
+        "different": [
+          "k0",
+          "k2"
+        ],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k0",
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "directly_reusable",
+      "R": "directly_reusable",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k2"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "2 condition(s) [not_equals, gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-15",
+      "oracleFindings": {
+        "different": [],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "insufficient_information",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-16",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k4"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k4"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0"
+        ],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "2 condition(s) [not_equals, equals], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-17",
+      "oracleFindings": {
+        "different": [
+          "k0"
+        ],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k0"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3",
+          "k1"
+        ]
+      },
+      "drawn": "2 condition(s) [absent, lte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-19",
+      "oracleFindings": {
+        "different": [
+          "k3",
+          "k1"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k3",
+          "k1"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k2"
+        ],
+        "unknownKeys": [
+          "k0",
+          "k4",
+          "k3"
+        ]
+      },
+      "drawn": "4 condition(s) [absent, gte, absent, absent], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-20",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k0",
+          "k4",
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k0",
+          "k4",
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k1",
+          "k0"
+        ]
+      },
+      "drawn": "2 condition(s) [member_of, gte], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values text",
+      "id": "wide-22",
+      "oracleFindings": {
+        "different": [
+          "k1",
+          "k0"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k1",
+          "k0"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k5",
+          "k0",
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k0",
+          "k2"
+        ],
+        "unknownKeys": [
+          "k1"
+        ]
+      },
+      "drawn": "4 condition(s) [absent, predicate_ref, capability_available, gte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-23",
+      "oracleFindings": {
+        "different": [
+          "k5",
+          "k2"
+        ],
+        "unknown": [
+          "k0",
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k5",
+          "k2"
+        ],
+        "unavailable": [
+          "k0"
+        ],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "incompatible",
+      "R": "incompatible",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k2"
+        ]
+      },
+      "drawn": "1 condition(s) [gte], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-24",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0",
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k0"
+        ],
+        "unknownKeys": [
+          "k4",
+          "k3"
+        ]
+      },
+      "drawn": "4 condition(s) [capability_available, member_of, not_equals, member_of], coverage Opaque, adaptation keys 1, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-26",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": [
+          "k3",
+          "k4"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k3",
+          "k4"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4",
+          "k5",
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k4",
+          "k2"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "3 condition(s) [gte, not_equals, lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-29",
+      "oracleFindings": {
+        "different": [
+          "k4",
+          "k2"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k4",
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k5"
+        ]
+      },
+      "drawn": "1 condition(s) [lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-33",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "incompatible",
+      "R": "incompatible",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k1",
+          "k0",
+          "k2",
+          "k5"
+        ]
+      },
+      "drawn": "4 condition(s) [absent, predicate_ref, lte, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-34",
+      "oracleFindings": {
+        "different": [
+          "k2",
+          "k5"
+        ],
+        "unknown": [
+          "k1",
+          "k0"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k2",
+          "k5"
+        ],
+        "unavailable": [
+          "k0"
+        ],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "incompatible",
+      "R": "incompatible",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k0",
+          "k3",
+          "k4",
+          "k1"
+        ]
+      },
+      "drawn": "4 condition(s) [member_of, member_of, lte, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values text",
+      "id": "wide-35",
+      "oracleFindings": {
+        "different": [
+          "k0",
+          "k4"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k0",
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k3",
+          "k5",
+          "k1"
+        ],
+        "uncoveredKeys": [
+          "k5",
+          "k1"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "3 condition(s) [equals, absent, predicate_ref], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-36",
+      "oracleFindings": {
+        "different": [
+          "k3"
+        ],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k3"
+        ],
+        "unavailable": [
+          "k1"
+        ],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k2"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [member_of], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-37",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0",
+          "k1"
+        ],
+        "uncoveredKeys": [
+          "k0",
+          "k1"
+        ],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "3 condition(s) [lte, present, capability_available], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-40",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4"
+        ],
+        "uncoveredKeys": [
+          "k4"
+        ],
+        "unknownKeys": [
+          "k5"
+        ]
+      },
+      "drawn": "2 condition(s) [present, not_equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-42",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k3",
+          "k0",
+          "k1"
+        ],
+        "uncoveredKeys": [
+          "k3",
+          "k0"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "4 condition(s) [capability_unavailable, absent, predicate_ref, member_of], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-44",
+      "oracleFindings": {
+        "different": [
+          "k3",
+          "k1"
+        ],
+        "unknown": [
+          "k5",
+          "k0"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k3",
+          "k1"
+        ],
+        "unavailable": [
+          "k0"
+        ],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "1 condition(s) [equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-46",
+      "oracleFindings": {
+        "different": [
+          "k3"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k3"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k2"
+        ],
+        "uncoveredKeys": [
+          "k2"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [present], coverage Opaque, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-47",
+      "oracleFindings": {
+        "different": [],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "1 condition(s) [capability_available], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 1, values text",
+      "id": "wide-49",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k2",
+          "k3",
+          "k1"
+        ],
+        "uncoveredKeys": [
+          "k1"
+        ],
+        "unknownKeys": [
+          "k4"
+        ]
+      },
+      "drawn": "4 condition(s) [member_of, lte, predicate_ref, capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-50",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": [
+          "k1",
+          "k4"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [
+          "k1"
+        ],
+        "unknown": [
+          "k4"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "adaptation_required",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0"
+        ],
+        "uncoveredKeys": [],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [lte], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-51",
+      "oracleFindings": {
+        "different": [],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k5"
+        ],
+        "uncoveredKeys": [
+          "k5"
+        ],
+        "unknownKeys": [
+          "k4"
+        ]
+      },
+      "drawn": "3 condition(s) [capability_available, predicate_ref, capability_unavailable], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-57",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k4",
+          "k5",
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [
+          "k5"
+        ],
+        "unknown": [
+          "k4",
+          "k1"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k0"
+        ]
+      },
+      "drawn": "1 condition(s) [gte], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-61",
+      "oracleFindings": {
+        "different": [
+          "k0"
+        ],
+        "unknown": []
+      },
+      "planFindings": {
+        "different": [
+          "k0"
+        ],
+        "unavailable": [],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3",
+          "k4",
+          "k2"
+        ]
+      },
+      "drawn": "3 condition(s) [present, capability_available, equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-62",
+      "oracleFindings": {
+        "different": [
+          "k4"
+        ],
+        "unknown": [
+          "k3",
+          "k2"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k3",
+          "k2"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k4",
+          "k3",
+          "k1"
+        ]
+      },
+      "drawn": "4 condition(s) [capability_unavailable, not_equals, lte, predicate_ref], coverage PartialDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-63",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k2",
+          "k4",
+          "k3",
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [
+          "k1"
+        ],
+        "unknown": [
+          "k2",
+          "k4",
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k0",
+          "k3",
+          "k1"
+        ],
+        "uncoveredKeys": [
+          "k0",
+          "k3",
+          "k1"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "4 condition(s) [capability_unavailable, absent, predicate_ref, not_equals], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-65",
+      "oracleFindings": {
+        "different": [
+          "k0"
+        ],
+        "unknown": [
+          "k4",
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k0"
+        ],
+        "unavailable": [
+          "k3"
+        ],
+        "unknown": [
+          "k4"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k5",
+          "k2",
+          "k1"
+        ]
+      },
+      "drawn": "3 condition(s) [gte, lte, equals], coverage ClosedDeclared, adaptation keys 1, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-66",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k5"
+        ],
+        "uncoveredKeys": [
+          "k5"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "1 condition(s) [predicate_ref], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-68",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [
+          "k5"
+        ],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4"
+        ],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3"
+        ]
+      },
+      "drawn": "3 condition(s) [predicate_ref, gte, present], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 0, values integer",
+      "id": "wide-76",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k4",
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [
+          "k4"
+        ],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k2",
+          "k0"
+        ]
+      },
+      "drawn": "2 condition(s) [capability_available, absent], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values text",
+      "id": "wide-77",
+      "oracleFindings": {
+        "different": [
+          "k2"
+        ],
+        "unknown": [
+          "k0"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k2"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k0"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "incompatible",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k5",
+          "k4",
+          "k3"
+        ],
+        "uncoveredKeys": [
+          "k3"
+        ],
+        "unknownKeys": []
+      },
+      "drawn": "3 condition(s) [member_of, lte, predicate_ref], coverage PartialDeclared, adaptation keys 2, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-79",
+      "oracleFindings": {
+        "different": [
+          "k5"
+        ],
+        "unknown": [
+          "k3"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k5"
+        ],
+        "unavailable": [
+          "k3"
+        ],
+        "unknown": []
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k3",
+          "k4"
+        ]
+      },
+      "drawn": "4 condition(s) [absent, absent, capability_unavailable, capability_unavailable], coverage ClosedDeclared, adaptation keys 2, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-80",
+      "oracleFindings": {
+        "different": [
+          "k3",
+          "k4"
+        ],
+        "unknown": [
+          "k0",
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k3",
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k0",
+          "k5"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "incompatible",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k3"
+        ],
+        "uncoveredKeys": [
+          "k3"
+        ],
+        "unknownKeys": [
+          "k1",
+          "k5"
+        ]
+      },
+      "drawn": "4 condition(s) [not_equals, gte, capability_unavailable, capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-81",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k1",
+          "k2",
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k1",
+          "k2",
+          "k5"
+        ]
+      },
+      "shape": "projection_lossy"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "adaptation_required",
+      "R": "adaptation_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k0"
+        ]
+      },
+      "drawn": "1 condition(s) [capability_available], coverage ClosedDeclared, adaptation keys 0, recorded failure 1, extra constraint 1, values integer",
+      "id": "wide-83",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k0"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k0"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "adaptation_required",
+      "C": "additional_evidence_required",
+      "R": "additional_evidence_required",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [
+          "k4",
+          "k5"
+        ],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k2"
+        ]
+      },
+      "drawn": "3 condition(s) [not_equals, absent, present], coverage ClosedDeclared, adaptation keys 2, recorded failure 0, extra constraint 1, values integer",
+      "id": "wide-84",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k2"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k2"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "insufficient_information",
+      "R": "insufficient_information",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k1"
+        ]
+      },
+      "drawn": "1 condition(s) [capability_available], coverage Opaque, adaptation keys 0, recorded failure 0, extra constraint 0, values integer",
+      "id": "wide-85",
+      "oracleFindings": {
+        "different": [],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "planFindings": {
+        "different": [],
+        "unavailable": [],
+        "unknown": [
+          "k1"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    },
+    {
+      "A": "additional_evidence_required",
+      "C": "incompatible",
+      "R": "incompatible",
+      "attribution": "R_with_C",
+      "baselineFindings": {
+        "differingKeys": [],
+        "uncoveredKeys": [],
+        "unknownKeys": [
+          "k4",
+          "k2",
+          "k5"
+        ]
+      },
+      "drawn": "4 condition(s) [equals, member_of, capability_unavailable, equals], coverage ClosedDeclared, adaptation keys 1, recorded failure 1, extra constraint 0, values text",
+      "id": "wide-95",
+      "oracleFindings": {
+        "different": [
+          "k4"
+        ],
+        "unknown": [
+          "k2",
+          "k1",
+          "k5"
+        ]
+      },
+      "planFindings": {
+        "different": [
+          "k4"
+        ],
+        "unavailable": [],
+        "unknown": [
+          "k2",
+          "k1",
+          "k5"
+        ]
+      },
+      "shape": "capability_absent_in_a"
+    }
+  ],
+  "notMeasured": [
+    "retrieval: a capsule is handed to both systems, so the discovery problem is still not exercised",
+    "a competent baseline extended with the eight condition kinds A does not model, which is the question this run deliberately leaves open rather than answering in the direction that flatters either side",
+    "no real consumer and no real transfer: the corpus is generated from declared distributions, not sampled from anything",
+    "no B or C baseline using UNI, so no assurance-integration comparison exists"
+  ],
+  "protocol": "docs/WIDE-CORPUS-PROTOCOL.md",
+  "reversalCondition": "at least one case where C and A return a different TransferStatus, over a 96-case corpus",
+  "schema": "world-wide-corpus/v1",
+  "summary": {
+    "A_matches_R": 52,
+    "C_matches_R": 96,
+    "attribution": {
+      "R_with_C": 44
+    },
+    "cases": 96,
+    "outcome": "separation_is_scope",
+    "outcomeReading": "A and C separate only where the baseline's model cannot carry the case, so the recorded tie was scoped to a narrow corpus. The planner is not vindicated by this, and the reduction is not re-opened on it alone",
+    "separations": 44,
+    "separationsByShape": {
+      "capability_absent_in_a": 37,
+      "projection_lossy": 7
+    },
+    "separationsOnExpressibleCases": 0
+  },
+  "systems": {
+    "A": {
+      "frozen": true,
+      "name": "the competent baseline",
+      "notExtended": "a separation is only evidence if the thing being separated was not changed to separate it",
+      "path": "tests/support/transfer_fixture.rs",
+      "sha256": "bc09c10b81896d25e61d502ae3ead3bb71c6d706163beaca5e4f4a8177492ce3"
+    },
+    "C": {
+      "frozen": true,
+      "name": "the transfer planner",
+      "path": "tests/support/transfer_core.rs",
+      "sha256": "4533e8df4cb24718c3f4c4ed2df24ac4573ee447af1712a38a688245d3bc270b"
+    },
+    "R": {
+      "frozen": false,
+      "independence": "plain values, calls nothing in transfer_core, reads no expected value",
+      "name": "a new independent oracle over the full published alphabet",
+      "path": "tests/support/wide_corpus.rs"
+    }
+  }
+}

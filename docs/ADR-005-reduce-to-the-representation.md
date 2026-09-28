@@ -174,6 +174,44 @@ would change that is a second consumer written by somebody who has not read `tes
 shown to be able to fail: a control consumer that keeps no unknown state and forgets the recorded failures
 is caught on the nine cases whose status turns on a state it cannot represent.
 
+### Condition 2 was executed on 2026-09-28, and it fired
+
+Pre-registered in [WIDE-CORPUS-PROTOCOL](WIDE-CORPUS-PROTOCOL.md), run by
+`cargo run --example wide_corpus`, recorded in
+[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md).
+
+**It fired.** 26 of 96 cases return a different status from `plan_transfer` than from the competent
+baseline, against a threshold of one. So the clause above holds as written: the tie was an artefact of 30
+hand-designed cases, and the comparison has now been re-run.
+
+**But the separations are entirely of one kind, and that is the finding.** Every one of the 26 sits on a
+case the baseline's model cannot carry: a condition kind outside the three it implements, a string value
+where it has integers, the capsule's coverage claim, recorded history, the out-of-band adaptation channel,
+or an undeclared target constraint. On the 33 cases both systems can express, the two agree on every one.
+A new independent oracle over the full published alphabet sides with the planner on all 26, and with the
+planner on all 96.
+
+**What this does and does not decide.** It decides that the recorded tie was scoped, and the recorded
+comparison now says so. It does not vindicate the planner. A competent baseline can add the eight missing
+kinds, the coverage claim, failure memory and the adaptation channel, and the recorded note already calls
+the baseline's line count an over-estimate, so what the extra 492 lines buy here is capability a baseline
+could buy more cheaply. This run deliberately cannot show that extending it would tie, because extending it
+would change the thing being compared. That question is open, and it is a measurement rather than a
+milestone.
+
+**The composition was amended once, and the amendment is recorded.** The first run drew 96 cases and
+produced one `expressible` case, which left the primary metric unpowered: a count of zero on one case is
+not a measurement, and reading it as the strong row would have been reading a power failure as a pass.
+The protocol's own clause about per-kind coverage existing so a hole is visible is what caught it.
+Amendment 1 stratified the corpus into a declared 32-case shared subset and 64 cases from the full
+distributions, with the metric, the threshold, the projection and the readings untouched. Run 0 is kept
+verbatim as `experiments/wide-corpus/results-run0-defect.json`; its generator no longer exists, which is
+why it is a file and not a paragraph.
+
+**Both systems were frozen by hash before the corpus was generated.** The baseline is not extended at all,
+because widening a corpus until a baseline that models three condition kinds fails would be rigging, and it
+is the easiest way to get a dramatic number.
+
 ## What this does not do
 
 It does not fund tranche 2. Moving code into test support is not integration, and a reduction is not a

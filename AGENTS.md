@@ -85,7 +85,15 @@ Kollio.
   and nothing else. 16 cases, three independent measurements, the consumer and `plan_transfer` both
   matching the declared expectation on all 16, zero reversals. `tests/consumer_check.rs` fails the build if
   the consumer reads anything it was not given, and `the_comparison_detects_a_wrong_consumer` proves the
-  comparison can fail. The second condition, a corpus wide enough to separate the two systems, is unrun.
+  comparison can fail.
+- The second ADR-005 reversal condition was executed on 2026-09-28 and **did** fire. The pre-registration is
+  `docs/WIDE-CORPUS-PROTOCOL.md`, amended once for composition and for no other reason, and the record is
+  `experiments/wide-corpus/RESULTS.md`. 96 cases over the full `ConditionKind` alphabet, 26 separations from
+  a threshold of 1, all 26 on cases the baseline's model cannot carry and none on the 33 both models
+  express, with a new independent oracle siding with the planner on all 96. The recorded 30-case tie was
+  scoped, not wrong. `tests/wide_corpus.rs` freezes the baseline and the planner by hash, so a separation
+  cannot be manufactured by extending the thing being separated. Run 0, which drew one expressible case in
+  96, is kept verbatim as `experiments/wide-corpus/results-run0-defect.json` and is not a result.
 - Boundaries that survive: the Kernel stores digests and never object bytes, a reconstruction cannot
   bootstrap its own trust, and no validity flag exists anywhere in the M3 model.
 
@@ -132,6 +140,7 @@ cargo run --example incumbent_comparison
 cargo run --example m4_branch
 cargo run --example transfer_benchmark
 cargo run --example consumer_check
+cargo run --example wide_corpus
 jq empty schemas/world-change-v0.experimental.schema.json
 jq empty schemas/experience-capsule-v0.experimental.schema.json
 ```

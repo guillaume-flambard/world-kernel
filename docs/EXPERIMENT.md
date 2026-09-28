@@ -137,14 +137,28 @@ not funded, so M5 closes as a reduction on the same disc as the ones before it, 
 
 ## What would resume it
 
-The two checks named with the M5 reduction have been run one at a time. The first, an external consumer
-that reads a capsule and decides what transfers, is pre-registered in
+Both checks named with the M5 reduction have now been run, and they did not say the same thing.
+
+The first, an external consumer that reads a capsule and decides what transfers, is pre-registered in
 [CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md) and recorded in
 [experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md): sixteen cases, three independent
 measurements, the consumer outside `tests/` and the planner both reaching the pre-registered decision on
 every one, zero reversals. That is a pass on a narrow claim, and it stays narrow for the reason the
 protocol declares before the run, which is that one session read the planner and then wrote the consumer.
-The second check, a corpus wide enough to separate the two systems, is not run.
+
+The second, a corpus wide enough to separate the two systems, is pre-registered in
+[WIDE-CORPUS-PROTOCOL](WIDE-CORPUS-PROTOCOL.md) and recorded in
+[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md). It fired. Ninety-six cases over the whole
+published alphabet, both systems frozen by hash, and 26 of them return a different status from the
+planner than from the baseline. Every one of the 26 sits where the baseline's model cannot carry the case,
+and on the 33 cases both systems can express the two agree everywhere. A new independent oracle sides with
+the planner on all 96. The recorded tie was therefore scoped, not wrong: it was a tie over three of the
+ten condition kinds the representation publishes.
+
+Neither result grows the Kernel, and neither re-opens the reduction. The first one cannot, because its own
+threat section was written before the run. The second one says what the extra lines buy, which is real
+capability and also capability a competent baseline can add more cheaply, and the run deliberately cannot
+say whether adding it would tie.
 
 The one cheap measurement named with the earlier reduction has been run. ADR-004 executed
 `cargo run --example incumbent_comparison` against a graph of wide nodes — the advantage
@@ -153,11 +167,11 @@ scaled linearly and unboundedly with fan-out, and the reversal case is recorded 
 and M4 resumed at tranche 1 only. The cost of being wrong turned out to be one example
 runner.
 
-What remains of the two checks [ADR-005](ADR-005-reduce-to-the-representation.md) named is the
-wider corpus that could separate the Kernel from the competent baseline, and the part of the first
-check that a second, independent consumer would settle. Both are an import and a command, neither
-needs a milestone, and neither is deferred behind one. The consumer check is observed rather than
-passed, because its own threat section was written before the run and is not revised by it.
+What remains is a measurement rather than a milestone: the competent baseline extended with the eight
+kinds it does not model, the coverage claim, failure memory and the out-of-band adaptation channel, run
+against the same frozen corpus. It cannot be run by extending the baseline in place, because the two
+conditions above are only evidence while the baseline is the frozen file. It is a second implementation to
+be compared, not a rewrite of the one that was measured.
 
 Nothing else resumes it. A second domain is measured rather than absent; a human path needs
 a consented observation; an external effect dispatcher stays forbidden; and the A-B-A

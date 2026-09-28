@@ -42,3 +42,7 @@ pub mod system_c;
 pub mod transfer_core;
 #[path = "transfer_fixture.rs"]
 pub mod transfer_fixture;
+/// The wide corpus: the bounded seeded generator and the independent oracle. The reversal condition
+/// that uses it is pre-registered in `docs/WIDE-CORPUS-PROTOCOL.md`.
+#[path = "wide_corpus.rs"]
+pub mod wide_corpus;

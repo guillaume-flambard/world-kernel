@@ -39,12 +39,13 @@ jobs:
         run: |
           for example in vertical_slice admission_benchmark m2_continuation \
                          m3_revision incumbent_comparison m4_branch transfer_benchmark \
-                         consumer_check; do
+                         consumer_check wide_corpus; do
             cargo run --example "$example"
           done
           cargo run --example incumbent_comparison -- --render-only
           cargo run --example transfer_benchmark -- --render-only
           cargo run --example consumer_check -- --render-only
+          cargo run --example wide_corpus -- --render-only
 
       # admission_benchmark records durations, which move on every run, so its artifact is restored
       # first. Every other file in experiments/ must then match what the run just produced. Two

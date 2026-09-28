@@ -1,13 +1,14 @@
 # World Kernel specification
 
 Status: experimental, normative for this repository  
-Last verified: 2026-09-28, the first ADR-005 reversal condition executed without firing: a consumer outside
-`tests/` reached the pre-registered transfer decision on 16 of 16 cases, pre-registered in
-[CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md) and recorded in
-[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md)  
+Last verified: 2026-09-28, both ADR-005 reversal conditions executed. The first did not fire, recorded in
+[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md). The second fired, recorded in
+[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md): the competent baseline and the planner
+separate on 26 of 96 cases over the whole published alphabet, and on none of the 33 both models can express
 Active milestone: none further pre-registered. M5 tranche 1 closed on its own gate and was then reduced;
 M4 tranche 1 is done and remains limited to the stories in [M4-PROTOCOL.md](M4-PROTOCOL.md). No M6, and no
-new capability, is authorised while the second reversal condition is unobserved.
+new capability, is authorised: the two reversal conditions attached to the reduction have now been run and
+neither funds one.
 
 ## 1. Document contract
 

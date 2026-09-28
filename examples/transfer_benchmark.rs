@@ -213,7 +213,7 @@ fn build_results(root: &Path) -> Value {
                 {"id": "C", "label": "deceptive similarity", "cases": 6, "expected": "incompatible"},
                 {"id": "D", "label": "insufficient or unknown", "cases": 12, "expected": "additional_evidence_required and insufficient_information"},
             ],
-            "notTheNinetySix": "the brief's 96-case corpus, bounded generative trees, the B and C UNI integrations and the JSONL fixture format are tranche 2 and are not claimed here",
+            "notTheNinetySix": "the brief's 96-case corpus, bounded generative trees, the B and C UNI integrations and the JSONL fixture format are tranche 2 and are not claimed here. The score above is not re-scored and does not change. A 96-case corpus over the full published alphabet does now exist, built for the ADR-005 reversal condition rather than for this milestone, and it is recorded in experiments/wide-corpus. It separated the baseline from the planner on cases the baseline's model cannot carry and on none of the cases both models can express, which is a statement about what the 30 cases above covered and not a rescoring of them.",
         },
         "metrics": {
             "falseDirectTransfer": {"kernel": 0, "baselineA": 0, "target": 0, "note": "the one unacceptable outcome on a closed corpus, and both systems hold it"},
