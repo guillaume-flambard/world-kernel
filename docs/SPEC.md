@@ -2,9 +2,10 @@
 
 Status: experimental, normative for this repository  
 Last verified: 2026-09-28, both ADR-005 reversal conditions executed. The first did not fire, recorded in
-[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md). The second fired, recorded in
-[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md): the competent baseline and the planner
-separate on 26 of 96 cases over the whole published alphabet, and on none of the 33 both models can express
+[experiments/consumer-transfer](../experiments/consumer-transfer/RESULTS.md). The second fired, recorded in
+[experiments/wide-corpus](../experiments/wide-corpus/RESULTS.md): the competent baseline and the planner
+separate on 26 of 96 cases over the whole published alphabet, and agree on all 33 cases both models can
+express.
 Active milestone: none further pre-registered. M5 tranche 1 closed on its own gate and was then reduced;
 M4 tranche 1 is done and remains limited to the stories in [M4-PROTOCOL.md](M4-PROTOCOL.md). No M6, and no
 new capability, is authorised: the two reversal conditions attached to the reduction have now been run and
@@ -567,7 +568,7 @@ M2 asked whether work survives its producer. M3 asks the next question: when the
 the work revisable without being rebuilt, and is the difference explainable? The decision and the real-state
 audit are in [ADR-002](ADR-002-revisable-work.md); the pre-registered matrix is in
 [M3-PROTOCOL.md](M3-PROTOCOL.md); the recorded result is in
-[experiments/incremental](experiments/incremental/README.md).
+[experiments/incremental](../experiments/incremental/README.md).
 
 Two contract requirements are new and normative:
 
@@ -645,7 +646,7 @@ declared conditions with the same unknown state does the same work. 30 closed ca
 families, zero false direct transfers on both sides, one capability difference found (a gate that does not
 model a declared parameter produces six false incompatibilities), seven mutations each failing a test. The
 brief's seventh continuation condition is unreachable from this workspace and is recorded as such. The
-result is in [experiments/transfer-benchmark](experiments/transfer-benchmark/RESULTS.md), produced by
+result is in [experiments/transfer-benchmark](../experiments/transfer-benchmark/RESULTS.md), produced by
 `cargo run --example transfer_benchmark`.
 
 **The tie is smaller than the Kernel, and that is the recorded reduction trigger.** The fifth continuation
@@ -683,7 +684,7 @@ the M3 mandate and accepted in [ADR-003](ADR-003-measure-before-building.md).
 
 Four systems received the same seven scenarios: R3 a full recompute, A3 a competent application cache
 on whole values, B3 the same application consuming UNI staleness, and C3 the core. The result is in
-[experiments/incumbent-comparison](experiments/incumbent-comparison/RESULTS.md), measured by
+[experiments/incumbent-comparison](../experiments/incumbent-comparison/RESULTS.md), measured by
 `cargo run --example incumbent_comparison`.
 
 All four reached the same observable result on all seven scenarios. A3 and B3 avoided the same work as
@@ -716,7 +717,7 @@ M2 asks whether a fresh consumer can reconstruct a work state and its justificat
 data, then determine what can be resumed in its own current context, without depending on the
 producer's session, private database or paths. The matrix, the primary outcome and the criteria are
 pre-registered in [M2-PROTOCOL.md](M2-PROTOCOL.md), written before the first retained run. The recorded
-result is in [experiments/continuation](experiments/continuation/README.md).
+result is in [experiments/continuation](../experiments/continuation/README.md).
 
 Two properties of the current implementation bound what any M2 claim may say:
 

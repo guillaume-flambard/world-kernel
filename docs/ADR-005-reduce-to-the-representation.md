@@ -155,7 +155,7 @@ Both checks are an import and a command. Neither needs a milestone, and neither 
 
 Pre-registered in [CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md), run by
 `cargo run --example consumer_check`, recorded in
-[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md).
+[experiments/consumer-transfer](../experiments/consumer-transfer/RESULTS.md).
 
 Sixteen cases in a domain the existing fixture does not use, each with an expectation declared from the
 contract before the consumer was written, measured three ways. The consumer, in its own crate outside
@@ -178,7 +178,7 @@ is caught on the nine cases whose status turns on a state it cannot represent.
 
 Pre-registered in [WIDE-CORPUS-PROTOCOL](WIDE-CORPUS-PROTOCOL.md), run by
 `cargo run --example wide_corpus`, recorded in
-[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md).
+[experiments/wide-corpus](../experiments/wide-corpus/RESULTS.md).
 
 **It fired.** 26 of 96 cases return a different status from `plan_transfer` than from the competent
 baseline, against a threshold of one. So the clause above holds as written: the tie was an artefact of 30

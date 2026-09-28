@@ -89,22 +89,22 @@ one.
 M2 asked whether work survives its producer. A fresh consumer can now reconstruct a work state and its
 justifications from an exported package and decide what it may resume. The capability was demonstrated
 for the Kernel only, because the two application baselines had no export of their own, so no cost
-comparison exists. Result: [experiments/continuation](experiments/continuation/README.md).
+comparison exists. Result: [experiments/continuation](../experiments/continuation/README.md).
 
 M3 asked whether recorded work is revisable without being rebuilt, and whether the difference is
 explainable. Five dimensions stayed separate, a consumed dependency forced re-evaluation, a recorded
 human decision was never recomputed, and every result carried an explanation. 23 of the 24
 stories were covered and one is partial (M3-08: the impact engine carries no assurance
-channel). Transfer to a second domain was measured — a second adapter kept `src/impact`
-byte-identical — and human utility is unreachable, not unmeasured, because it needs a
-consented human observation. Result: [experiments/incremental](experiments/incremental/README.md).
+channel). Transfer to a second domain was measured: a second adapter kept `src/impact`
+byte-identical. Human utility is unreachable, not unmeasured, because it needs a
+consented human observation. Result: [experiments/incremental](../experiments/incremental/README.md).
 
 Then the comparison, in [ADR-003](ADR-003-measure-before-building.md). A full recompute, a competent
 application cache, the same application consuming UNI staleness, and the impact core were given the same
 seven scenarios. All four agreed on every observable result. The application avoided the same work as the
 core on six of the seven. On the seventh the core ran no evaluator where the application ran two, because
 a consumed facet is a narrower cache key than a whole value, and that cost 1630 lines. Result:
-[experiments/incumbent-comparison](experiments/incumbent-comparison/RESULTS.md).
+[experiments/incumbent-comparison](../experiments/incumbent-comparison/RESULTS.md).
 
 The reduction was applied. `src/impact` left the shipped surface, the rules it enforced were written down
 as rules a consumer can be held to in [IMPACT-CONTRACT.md](IMPACT-CONTRACT.md), and the engine stayed in
@@ -141,14 +141,14 @@ Both checks named with the M5 reduction have now been run, and they did not say 
 
 The first, an external consumer that reads a capsule and decides what transfers, is pre-registered in
 [CONSUMER-CHECK-PROTOCOL](CONSUMER-CHECK-PROTOCOL.md) and recorded in
-[experiments/consumer-transfer](experiments/consumer-transfer/RESULTS.md): sixteen cases, three independent
+[experiments/consumer-transfer](../experiments/consumer-transfer/RESULTS.md): sixteen cases, three independent
 measurements, the consumer outside `tests/` and the planner both reaching the pre-registered decision on
 every one, zero reversals. That is a pass on a narrow claim, and it stays narrow for the reason the
 protocol declares before the run, which is that one session read the planner and then wrote the consumer.
 
 The second, a corpus wide enough to separate the two systems, is pre-registered in
 [WIDE-CORPUS-PROTOCOL](WIDE-CORPUS-PROTOCOL.md) and recorded in
-[experiments/wide-corpus](experiments/wide-corpus/RESULTS.md). It fired. Ninety-six cases over the whole
+[experiments/wide-corpus](../experiments/wide-corpus/RESULTS.md). It fired. Ninety-six cases over the whole
 published alphabet, both systems frozen by hash, and 26 of them return a different status from the
 planner than from the baseline. Every one of the 26 sits where the baseline's model cannot carry the case,
 and on the 33 cases both systems can express the two agree everywhere. A new independent oracle sides with
@@ -161,9 +161,9 @@ capability and also capability a competent baseline can add more cheaply, and th
 say whether adding it would tie.
 
 The one cheap measurement named with the earlier reduction has been run. ADR-004 executed
-`cargo run --example incumbent_comparison` against a graph of wide nodes — the advantage
+`cargo run --example incumbent_comparison` against a graph of wide nodes. The advantage
 scaled linearly and unboundedly with fan-out, and the reversal case is recorded in the
-`reversalCase` section of [experiments/incumbent-comparison/results.json](experiments/incumbent-comparison/results.json) — and on that condition the reduction was reversed
+`reversalCase` section of [experiments/incumbent-comparison/results.json](../experiments/incumbent-comparison/results.json), and on that condition the reduction was reversed
 and M4 resumed at tranche 1 only. The cost of being wrong turned out to be one example
 runner.
 

@@ -1,193 +1,138 @@
 # World Kernel
 
-World Kernel is an experimental local runtime for grounded changes. It connects an exact candidate,
-the observations it read, an assurance result, current authority, an atomic commit and a replayable
-receipt.
+[![CI](https://github.com/guillaume-flambard/world-kernel/actions/workflows/ci.yml/badge.svg)](https://github.com/guillaume-flambard/world-kernel/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg)](docs/SPEC.md)
 
-It is deliberately not an agent framework, a model router, a policy engine or the source of truth for
-integrated products. Producers propose. Assurance providers evaluate. The Kernel admits and records a
-change inside the World it owns.
+World Kernel is a Rust research prototype for admitting and recording grounded changes inside a
+declared digital scope. A change connects an exact candidate, the observations used to prepare it,
+an assurance result, current authority, an atomic commit and a replayable receipt.
 
-## Current slice
+The project asks a narrow question: can another actor accept, reject or resume an exact change from
+public records without trusting the first actor's conversation or private reasoning?
 
-The Rust library exposes one deep mutation interface:
+World Kernel is not an agent framework, a model router, a policy engine or a universal source of
+truth. Producers propose. Assurance providers evaluate. The Kernel admits and records a change inside
+the World it owns.
+
+## Status
+
+This repository is experimental. It has no release, is not published to crates.io and makes no
+production-readiness claim. The current pre-registered research sequence is complete and no further
+milestone is pre-registered. The code, tests, protocols and recorded results remain here so the claims
+can be inspected and reproduced.
+
+The main result is mixed by design. Several capabilities were established, but comparisons against
+competent application-specific baselines often tied. One later 96-case corpus found 26 cases that the
+portable transfer model could represent and the frozen baseline could not. That measures a capability
+difference, not user value or a reason to expand the project.
+
+The exact status and stop conditions live in [docs/SPEC.md](docs/SPEC.md). The shorter experimental
+record is in [docs/EXPERIMENT.md](docs/EXPERIMENT.md).
+
+## Run the vertical slice
+
+You need a current stable Rust toolchain. `jq` is only required for the schema checks in the full
+verification gate.
+
+```bash
+git clone https://github.com/guillaume-flambard/world-kernel.git
+cd world-kernel
+cargo run --example vertical_slice
+```
+
+The example creates an in-memory World, observes a versioned document, binds a candidate to a simulated
+assurance result, submits one grounded change, prints the receipt and verifies that replay reconstructs
+the live snapshot.
+
+The central mutation seam is:
 
 ```rust
 kernel.submit(&grounded_change, &authority)
 ```
 
-It returns either a typed rejection or a receipt. The implementation checks the exact candidate,
-trusted assurance provider, current authority, world revision, dependency revisions, context coverage,
-patch preconditions and idempotency before publishing the projection and event in one SQLite
-transaction.
+It returns either a typed rejection or a receipt. `Kernel::snapshot` reads the current projection.
+`Kernel::replay` rebuilds it from recorded events without invoking a model or an external effect.
 
-`Kernel::snapshot` reads the current projection. `Kernel::replay` reconstructs it from the event log
-without invoking a model or an external effect.
+This repository is meant to be cloned and studied as an experiment. If you want to exercise the
+library from another local crate, use a path dependency:
 
-The first integration seams preserve product ownership:
+```toml
+[dependencies]
+world-kernel = { path = "../world-kernel" }
+```
 
-- `UniCollector` hashes the candidate before and after UNI verification, asks UNI to export and
-  validate its versioned evidence bundle, requires valid `artifact_files` evidence for that exact
-  path and digest, and only then binds the byte-stable accepted report to the candidate.
-- Kollio documents become versioned observations while Kollio remains their canonical owner.
-- Kollio impact assessments become reassessment frontiers, never truth verdicts.
+## What is implemented
 
-## M1 benchmark
+- Admission of an exact candidate against current authority, trusted assurance, current revisions,
+  declared context coverage, patch preconditions and idempotency.
+- Atomic SQLite publication of the projection, event and stored outcome.
+- Replayable history and portable continuation records.
+- An impact engine that keeps impact, truth, assurance, authority and coverage separate.
+- A constrained branch-convergence experiment that evaluates the reconstructed candidate against the
+  target's own rules.
+- A portable experience representation. The measured transfer planner remains test support rather than
+  part of the shipped library surface.
+- Read-only integration seams for UNI and Kollio that preserve ownership in those products.
 
-An equal-information benchmark compares three systems over one versioned 80-case corpus: an
-application-specific SQLite gate, the same gate with the verifier outcome produced through the UNI
-seam, and UNI plus the Kernel. All three receive the same deserialized case, so no system gets a hidden
-oracle or an extra dependency.
+## Recorded experiments
+
+Every result below has a checked-in machine record, a human-readable account and a runnable example or
+test. The CI workflow reruns the examples and rejects drift in recorded artifacts.
+
+| Experiment | Recorded finding | Entry point |
+|---|---|---|
+| Admission | 80 cases, no decision difference between the Kernel and two competent application baselines | [result](experiments/admission-benchmark/RESULTS.md) |
+| Portable continuity | 24 pre-registered sequences covered for the Kernel; no baseline cost comparison was possible | [result](experiments/continuation/RESULTS.md) |
+| Incremental revision | 23 of 24 stories covered and one partial; the equal-information comparison tied on observable results | [result](experiments/incremental/RESULTS.md) |
+| Branch convergence | A composition of two individually valid branches is blocked when the reconstructed candidate violates the target rule | [result](experiments/branch-convergence/RESULTS.md) |
+| Transfer benchmark | 30 closed cases, zero false direct transfers and a tie with the baseline | [result](experiments/transfer-benchmark/RESULTS.md) |
+| External consumer check | 16 cases, three independent measurements and no reversal of the reduction decision | [result](experiments/consumer-transfer/RESULTS.md) |
+| Wide transfer corpus | 96 cases, 26 separations where the baseline model could not carry the case, and agreement on all 33 cases both models could express | [result](experiments/wide-corpus/RESULTS.md) |
+
+Run an individual experiment with its matching example:
 
 ```bash
 cargo run --example admission_benchmark
-```
-
-The recorded run is in
-[experiments/admission-benchmark](experiments/admission-benchmark/README.md), with the method, the
-limits and a negative result: on these 80 conditions the portable envelope prevented no class of
-error that a competent application transaction does not also prevent. Whether that justifies the
-envelope is an open product decision, recorded in
-[RESULTS.md](experiments/admission-benchmark/RESULTS.md).
-
-## Transferable experience
-
-A past attempt, packaged so it can be evaluated somewhere else. The output is a plan, not a boolean, and
-the rule it exists to protect is that **similarity is not applicability**: two contexts can match on every
-loud key and still differ on the one that matters.
-
-```bash
-cargo run --example transfer_benchmark
-```
-
-`src/experience.rs` refuses to collapse four states that look alike: a fact that is unknown, a fact that is
-absent, a capability that was never checked, and a key nobody declared. The planner that compares the
-capsule's declared conditions against a target and returns one of five statuses with the obligations the
-status implies was moved out of the crate to `tests/support/transfer_core.rs` by
-[ADR-005](docs/ADR-005-reduce-to-the-representation.md): the measurement said an application gate reaches
-the same decisions in fewer lines, so the representation ships and the procedure does not. Four of those
-requirements are construction sites rather than rules to remember: an
-instantiated target candidate is built with an empty assurance list, adaptability is a declared boolean
-defaulting to false, a recurrent prior failure is an obligation rather than a sentence, and a plan bound to
-a revision that has since moved refuses to instantiate.
-
-The recorded result is a **tie** with a competent non-Kernel baseline, and it is recorded as one. 30 closed
-cases across four families, zero false direct transfers on either side, one real capability difference
-found, seven mutations each failing a test. A tie funds nothing further. The result is in
-[experiments/transfer-benchmark](experiments/transfer-benchmark/RESULTS.md).
-
-## Branch convergence
-
-Two alternatives, one adoption. Alpha and Beta each look fine on their own, and combining them breaks a
-rule neither broke. That is the case a value-comparison merge passes and a real gate must not.
-
-```bash
-cargo run --example m4_branch
-cargo run --example transfer_benchmark
-```
-
-`src/branch.rs` forks from an immutable base, prepares a proposal against pinned source and target,
-reconstructs the candidate, and checks the **target's own rules on that candidate** before anything moves.
-A refusal names the rule and the versions it looked at, the target does not change, and both branch
-histories stay readable. A revised branch that composes to exactly the limit is admissible, because a test
-that blocks every adoption is not a test.
-
-Scope is tranche 1 only, pre-registered in [M4-PROTOCOL.md](docs/M4-PROTOCOL.md) and authorised by
-[ADR-004](docs/ADR-004-the-facet-advantage-scales.md). No multi-parent merge, no automatic re-grounding, no
-automatic merge of any kind, and no second impact engine. The recorded result is in
-[experiments/branch-convergence](experiments/branch-convergence/RESULTS.md).
-
-## The impact engine
-
-When the conditions change, recorded work has to become revisable without being rebuilt, and the difference
-has to be explainable. The engine for that was built, measured, reduced away, and then restored, because
-the measurement that justified the reduction turned out not to hold on a real shape of payload. Details in
-[ADR-003](docs/ADR-003-measure-before-building.md) and
-[ADR-004](docs/ADR-004-the-facet-advantage-scales.md).
-
-What the engine enforces is also written down as rules a consumer can be held to: five separate results
-instead of one validity flag, a recompute that
-cannot promote a record, profiles granted by the consumer, a recorded human decision that is never
-recomputed, a dependency that is what a run actually consumed, a publication that is a conservative
-compare-and-swap, and nothing that launches an external effect. See
-[IMPACT-CONTRACT.md](docs/IMPACT-CONTRACT.md).
-
-It is in `src/impact`, and the comparison that judges it stays re-runnable:
-
-```bash
-cargo run --example m3_revision
-```
-
-The recorded M3 result, its coverage and its limits are in
-[experiments/incremental](experiments/incremental/README.md).
-
-
-## The comparison, and why the experiment stops here
-
-Three milestones produced the same sentence: capability established, differential value not measured. The
-only increment that could settle it was to measure the core against a competent application that had the
-same information. So the last run is a comparison, not a milestone.
-
-```bash
-cargo run --example incumbent_comparison
-cargo run --example m4_branch
-```
-
-R3 is a full recompute, A3 is a competent application cache on whole values, B3 is the same application
-consuming UNI staleness, and C3 is the core. All four got the same seven scenarios. All four reached the
-same observable result. On six of the seven, A3 and B3 avoided exactly the work C3 avoided. On the seventh,
-the core ran no evaluator where the application ran two, because a consumed facet is a narrower cache key
-than a whole value.
-
-Everything else the core produces, the five dimensions, the obligation, the disposition, the explanation,
-the granted profile and the protection of a recorded decision, is not consumed by the fixture. The result
-was a reduction, not a victory, and the decision read "reduce the Kernel to UNI plus adapters, and do not
-start M4". The clause "the core saves nothing the application could not already do" is false and is
-recorded as false. ADR-003 required a reversal case with the decision, measured it, and the case fired:
-a consumed facet is a narrower cache key than a whole value, so the saving grows with fan-out and does not
-stop. [ADR-004](docs/ADR-004-the-facet-advantage-scales.md) reverses the reduction and restores the engine,
-[ADR-003](docs/ADR-003-measure-before-building.md) keeps the recommendation it gave, and the numbers are in
-[RESULTS.md](experiments/incumbent-comparison/RESULTS.md).
-
-## Verify
-
-```bash
-cargo test
-cargo clippy --all-targets --all-features -- -D warnings
-cargo fmt --check
-cargo run --example vertical_slice
-cargo run --example admission_benchmark
-cargo run --example m2_continuation
-cargo run --example m3_revision
 cargo run --example incumbent_comparison
 cargo run --example m4_branch
 cargo run --example transfer_benchmark
-jq empty schemas/world-change-v0.experimental.schema.json
-jq empty schemas/experience-capsule-v0.experimental.schema.json
+cargo run --example consumer_check
+cargo run --example wide_corpus
 ```
 
 ## Scope limits
 
-This prototype has no external effect dispatcher, signatures, distributed authority, negative-query
+The prototype has no external effect dispatcher, signatures, distributed authority, negative-query
 read sets or generic merge protocol. `AuthoritySource` is checked synchronously at admission but is not
-yet a versioned authority ledger. The UNI collector detects ordinary mutation and post-verification
+a versioned authority ledger. The UNI collector detects ordinary mutation and post-verification
 substitution, but it does not provide an immutable filesystem snapshot against a concurrent A-B-A
-mutation. The host process and configured UNI binary remain trusted. Those limitations are part of the
-experiment, not hidden guarantees.
+mutation. The host process and configured UNI binary remain trusted.
 
-See [docs/BOUNDARIES.md](docs/BOUNDARIES.md) and [docs/EXPERIMENT.md](docs/EXPERIMENT.md).
+These are experimental limits, not hidden guarantees. See
+[docs/BOUNDARIES.md](docs/BOUNDARIES.md) for the ownership and trust model.
 
-## Documentation map
+## Documentation
 
-- [docs/SPEC.md](docs/SPEC.md) is the normative contract and active implementation milestone.
-- [docs/BOUNDARIES.md](docs/BOUNDARIES.md) records state ownership, trust and current proof limits.
-- [docs/IMPACT-CONTRACT.md](docs/IMPACT-CONTRACT.md) states the impact rules a consumer can be held to, and
-  the stable codes, bound to the engine by a test.
-- [docs/TRANSFER-CONTRACT.md](docs/TRANSFER-CONTRACT.md) states the transfer rules a consumer can be held
-  to now that the planner is not shipped, bound to the moved implementation by a test.
-- [docs/M4-PROTOCOL.md](docs/M4-PROTOCOL.md) and [docs/M5-PROTOCOL.md](docs/M5-PROTOCOL.md) are the
-  pre-registered scopes of the branch and transfer tranches.
-  [ADR-004](docs/ADR-004-the-facet-advantage-scales.md) is the reversal of the reduction and the M4 decision.
-  [ADR-005](docs/ADR-005-reduce-to-the-representation.md) applies the reduction the M5 gate called for.
-- [docs/EXPERIMENT.md](docs/EXPERIMENT.md) records the experimental question and falsification gates.
-- [AGENTS.md](AGENTS.md) is the short entry point for OpenCode and other coding agents.
+- [docs/SPEC.md](docs/SPEC.md) is the normative product and protocol specification.
+- [docs/EXPERIMENT.md](docs/EXPERIMENT.md) records the question, comparisons and stop conditions.
+- [docs/BOUNDARIES.md](docs/BOUNDARIES.md) records ownership, trust assumptions and proof limits.
+- [docs/IMPACT-CONTRACT.md](docs/IMPACT-CONTRACT.md) states the impact rules bound to the engine by tests.
+- [docs/TRANSFER-CONTRACT.md](docs/TRANSFER-CONTRACT.md) states the transfer rules retained after the
+  planner moved out of the library surface.
+- [docs/M4-PROTOCOL.md](docs/M4-PROTOCOL.md) and [docs/M5-PROTOCOL.md](docs/M5-PROTOCOL.md) preserve the
+  pre-registered scopes for branch convergence and transferable experience.
+- [CONTRIBUTING.md](CONTRIBUTING.md) explains the contribution and verification path.
+- [AGENTS.md](AGENTS.md) is the repository contract for coding agents.
+
+## Contributing
+
+This is a measured experiment with a closed current milestone sequence. Bug reports, documentation
+repairs, reproduction reports and narrowly scoped fixes are welcome. New capabilities need evidence
+that they answer an existing stop or reversal condition before implementation starts.
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE).

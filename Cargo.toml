@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
 description = "Experimental runtime for grounded, admitted, replayable changes"
+repository = "https://github.com/guillaume-flambard/world-kernel"
+readme = "README.md"
 
 [dependencies]
 rusqlite = { version = "0.32", features = ["bundled"] }
@@ -18,4 +20,3 @@ thiserror = "2"
 # external: it can reach `world_kernel::experience` and nothing else in this repository.
 [dev-dependencies]
 consumer-transfer = { path = "experiments/consumer-transfer" }
-
