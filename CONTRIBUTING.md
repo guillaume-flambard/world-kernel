@@ -88,6 +88,16 @@ The last two are separate on purpose. `experiments/consumer-transfer` is not a r
 checked-in records. If a record changed, regenerate it and include it, and say why it changed. If it
 changed and you did not expect it to, that is the finding.
 
+One rewrite is expected and is not a finding. `experiments/admission-benchmark/` records timings,
+and timings move on every run, so its files come back modified after the gate even with no code
+change of your own. Three `results.json` files under `experiments/` (admission-benchmark,
+continuation, incremental) also carry an environment block naming the machine the measurement was
+recorded on, and that block rewrites on a machine of a different arch or OS. CI restores the
+benchmark directory and compares the JSON records with the environment identity stripped, because
+the environment is provenance, not measurement. Do the same locally: restore the benchmark
+directory with `git checkout -- experiments/admission-benchmark/`, leave the environment blocks
+alone, and treat every other changed record as the finding.
+
 ## Invariants that tests enforce
 
 These are not conventions. Each one is checked by a named test, and the test fails when the
