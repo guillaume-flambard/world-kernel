@@ -1,7 +1,7 @@
 # World Kernel
 
 [![CI](https://github.com/guillaume-flambard/world-kernel/actions/workflows/ci.yml/badge.svg)](https://github.com/guillaume-flambard/world-kernel/actions/workflows/ci.yml)
-[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![License: MIT or Apache-2.0](https://img.shields.io/badge/license-MIT%20or%20Apache--2.0-blue.svg)](LICENSE-MIT)
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg)](docs/SPEC.md)
 
 World Kernel is a Rust research prototype for admitting and recording grounded changes inside a
@@ -123,6 +123,7 @@ These are experimental limits, not hidden guarantees. See
 - [docs/M4-PROTOCOL.md](docs/M4-PROTOCOL.md) and [docs/M5-PROTOCOL.md](docs/M5-PROTOCOL.md) preserve the
   pre-registered scopes for branch convergence and transferable experience.
 - [CONTRIBUTING.md](CONTRIBUTING.md) explains the contribution and verification path.
+- [SECURITY.md](SECURITY.md) states the trust boundary and how to report a flaw in it.
 - [AGENTS.md](AGENTS.md) is the repository contract for coding agents.
 
 ## Contributing
@@ -135,4 +136,4 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE).
+Licensed under either of [MIT](LICENSE-MIT) or [Apache License 2.0](LICENSE-APACHE), at your option.

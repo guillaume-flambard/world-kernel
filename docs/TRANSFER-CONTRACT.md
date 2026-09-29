@@ -13,7 +13,7 @@ transfer gate rather than depending on this one, which is what the reduction say
 Where the two disagree, the moved implementation and its tests are what this repository actually does,
 and this document is the claim about what a consumer may rely on.
 
-`the_transfer_contract_and_the_moved_implementation_agree` in `tests/transfer_plan.rs` reads this
+`the_transfer_contract_and_the_moved_implementation_agree` in `tests/transfer_contract.rs` reads this
 document and the moved implementation and fails if either names a variant the other does not, so a
 status cannot be added, dropped or renamed on one side without the other disagreeing.
 
